@@ -1,0 +1,16 @@
+# Build artifacts
+dist/
+build/
+coverage/
+node_modules/
+
+# TypeScript specific
+*.d.ts
+
+# Editor configs
+.vscode/
+.idea/
+
+# Config files that don't need linting
+*.config.js
+*.config.ts

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@dossier-ui",
+    "utils": "@dossier-ui/lib/utils",
+    "ui": "@dossier-ui/components",
+    "lib": "@dossier-ui/lib",
+    "hooks": "@dossier-ui/hooks"
+  },
+  "iconLibrary": "lucide"
+}

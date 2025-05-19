@@ -1,0 +1,24 @@
+# Build output
+build/
+dist/
+coverage/
+node_modules/
+
+# Ignore compiled types
+*.d.ts
+
+# Ignore lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore generated files
+CHANGELOG.md
+
+# Ignore version control dirs
+.vscode/
+.idea/
+
+# Ignore config files
+*.config.js
+*.config.ts
