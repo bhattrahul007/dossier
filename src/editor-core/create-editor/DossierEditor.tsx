@@ -6,6 +6,7 @@ import { EditorContent } from '@tiptap/react';
 export const DossierEditor = () => {
   return (
     <CoreEditor
+      className="dossier-editor"
       getEnabledExtensions={getEnabledExtensions}
       appearanceRenderer={({ editor }) => (
         <>

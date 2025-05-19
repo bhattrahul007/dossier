@@ -10,10 +10,19 @@ export type CoreEditorProps = {
   getEnabledExtensions: () => Extensions;
 
   appearanceRenderer: (config: CoreEditorConfig) => JSX.Element | null;
+
+  className?: string;
 };
 
-export function CoreEditor({ getEnabledExtensions, appearanceRenderer }: CoreEditorProps) {
-  const editor = useEditor({ extensions: getEnabledExtensions() });
+export function CoreEditor({ getEnabledExtensions, appearanceRenderer, className }: CoreEditorProps) {
+  const editor = useEditor({
+    extensions: getEnabledExtensions(),
+    editorProps: {
+      attributes: {
+        class: className ?? ''
+      }
+    }
+  });
 
   const memoizedValue = useMemo(() => ({ editor }), []);
 
