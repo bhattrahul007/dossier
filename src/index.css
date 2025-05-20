@@ -115,6 +115,14 @@
     box-sizing: border-box;
   }
 
+  html,
+  body,
+  #__dossier-root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     @apply bg-background text-foreground font-medium leading-6;
     font-family: Manrope, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -125,22 +133,46 @@
   }
 }
 
+.ProseMirror.dossier-editor {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  gap: 1rem;
+}
+
 .ProseMirror.dossier-editor h1 {
-  @apply scroll-m-20 text-4xl font-extrabold tracking-tight text-5xl leading-18;
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-16 mb-2;
 }
 
 .ProseMirror.dossier-editor h2 {
-  @apply scroll-m-20 text-3xl font-bold tracking-tight leading-10;
+  @apply scroll-m-20 text-3xl font-bold tracking-tight leading-10 mb-2;
 }
 
 .ProseMirror.dossier-editor h3 {
-  @apply scroll-m-20 text-2xl font-bold tracking-tight leading-10;
+  @apply scroll-m-20 text-2xl font-bold tracking-tight leading-8;
 }
 
 .ProseMirror.dossier-editor h4 {
-  @apply scroll-m-20 text-xl font-bold tracking-tight leading-8;
+  @apply scroll-m-20 text-xl font-bold tracking-tight leading-7;
 }
 
 .ProseMirror.dossier-editor p {
-  @apply leading-6 font-medium;
+  @apply leading-5 font-medium;
+  padding: 0 4px;
+}
+
+.full-screen {
+  @apply w-full h-full;
+}
+
+.dossier-editor-wrapper > div:first-child {
+  @apply w-full h-full;
+}
+
+.dossier-editor .node-empty::before {
+  @apply text-muted-foreground;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
 }
