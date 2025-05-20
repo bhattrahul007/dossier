@@ -5,15 +5,17 @@ import { EditorContent } from '@tiptap/react';
 
 export const DossierEditor = () => {
   return (
-    <CoreEditor
-      className="dossier-editor"
-      getEnabledExtensions={getEnabledExtensions}
-      appearanceRenderer={({ editor }) => (
-        <>
-          <EditorContent editor={editor} />
-          <FloatingToolbar>This is me</FloatingToolbar>
-        </>
-      )}
-    />
+    <div className="dossier-editor-wrapper full-screen px-4 py-2">
+      <CoreEditor
+        className="dossier-editor full-screen"
+        getEnabledExtensions={getEnabledExtensions}
+        appearanceRenderer={({ editor }) => (
+          <>
+            <EditorContent editor={editor} />
+            <FloatingToolbar>This is me</FloatingToolbar>
+          </>
+        )}
+      />
+    </div>
   );
 };
